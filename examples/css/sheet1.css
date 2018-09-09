@@ -1,0 +1,16 @@
+img {
+    margin: 100px;
+}
+
+p {
+    background-color: orange;
+}
+
+.highlighted {
+    background-color: yellow;
+}
+
+#first {
+  background-color: blue;  
+}
+
