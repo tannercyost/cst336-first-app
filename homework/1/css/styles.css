@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: gray;
+}
+
+header, main, nav, footer {
+    text-align: center;
+}
+
+.column {
+    display: inline-block;
+    margin:3em;
+}
+
+nav a { /* links within "nav" container */
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none; 
+    color: white;
+    font-family: 'Helvetica';
+}
+
+#currentLink {
+   color: #66C4E3;
+}
+
+nav a:hover { /* pseudo class */
+    border-bottom:2px purple solid;
+}
+
+.element {
+    font-family: Helvetica;
+    color: white;
+}
+
+strong {
+    color: #66C4E3;
+}
+
+footer {
+    clear: left;
+    color: white;
+    font-size: 8pt;
+    font-family: 'Helvetica'
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+    color: white;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+}
+
