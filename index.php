@@ -4,7 +4,8 @@
         <title> </title>
     </head>
     <body>
-        <a href="/classwork/index.php">Main Class Link</a>
-        <p>Look an update</p>
+        <h1>Tanner Yost</h1>
+        <a href="labs/1/portfolio">Lab 1</a>
+        <a href="homework/1">Homework 1</a>
     </body>
 </html>
