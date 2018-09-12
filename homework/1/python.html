@@ -1,6 +1,6 @@
+<!-- information obtained from https://pdfs.semanticscholar.org/presentation/f5aa/7488e8a705de2e01895bf0e26bff6420abac.pdf and elsewhere denoted -->
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta char=”utf-8” />
         <title>Tanner Yost - Personal Website</title>
@@ -21,7 +21,20 @@
         </nav>
         
         <main>
+            <span class="column">
+                <p>Python is an easy language to learn, but it has many intricacies.</p>
+                <p>It has both object-oriented aspects and procedural aspects.</p>
+                <p>The language also has automatic memory management, which can't be said for languages like C and C++.</p>
+                <aside>Python is famous for being a concise language.</aside> <!-- aside is a new tag -->
+                <aside>For example, the following code forms a function which returns a subset of all its arguments.</aside>
+                <code>f = lambda x: [[y for j, y in enumerate(set(x)) if (i >> j) & 1] for i in range(2**len(set(x)))]</code>
+                <!-- https://wiki.python.org/moin/Powerful%20Python%20One-Liners -->
+                <p>Python also can be run in the REPL, which is an interactive shell in which you can run code line by line and it is evaluated immediately.</p> <!-- code is a new tag -->
+            </span>
 
+            <span class="column">
+                <img src="img/python.jpg" />
+            </span>
         </main>
         
         <footer>

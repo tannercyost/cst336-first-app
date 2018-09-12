@@ -8,8 +8,19 @@ header, main, nav, footer {
 }
 
 .column {
-    display: inline-block;
+    display: inline-block; /* new property */
     margin:3em;
+    width: auto;
+}
+
+.java {
+    width:50%;
+    margin:0px;
+}
+
+img {
+    opacity: .5;
+    
 }
 
 nav a { /* links within "nav" container */
@@ -29,12 +40,25 @@ nav a:hover { /* pseudo class */
     border-bottom:2px purple solid;
 }
 
+p {
+    font-family: Helvetica;
+    color: white;
+}
+
 .element {
     font-family: Helvetica;
     color: white;
 }
 
-strong {
+code {
+    background-color: #555;
+    border-radius: 3px; /* new property */
+    font-family: courier, monospace;
+    padding: 0 3px;
+    color: white;
+}
+
+strong { 
     color: #66C4E3;
 }
 
@@ -57,4 +81,3 @@ h2 {
     margin-bottom: 0px;
     font-family: 'Helvetica';
 }
-
