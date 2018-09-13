@@ -80,3 +80,12 @@ h2 {
     margin-bottom: 0px;
     font-family: 'Helvetica';
 }
+
+.top {
+    width:50%;
+}
+
+
+.bottom {
+    width:25%;
+}
