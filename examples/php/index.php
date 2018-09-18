@@ -11,7 +11,7 @@
         $iterations = 9;
         echo '<table>';
 
-        for ($i = 0; $i < $iterations; ++$i) {
+        for ($i = 0; $i < $iterations; $i++) {
             echo '<tr>';
             $num = rand(1, 20);
             $odd_or_even = (0 == $num % 2) ? 'even' : 'odd';
