@@ -6,21 +6,23 @@
     <body>
         
         <?php
+        
+        $weekdays = array();
+        $weekdays[] = "M";
+        $weekdays[] = "T"; 
+        array_push($weekdays,"W"); 
+        echo "Displaying values using var_dump:";
+        var_dump($weekdays);
+        echo "<br><br>";
+        echo "Displaying values using print_r:";
+        print_r($weekdays);
+        
+        foreach ($weekdays as $day) {
+        	echo "<br><br> $day";
+        } 
 
-        $total = 0;
-        $iterations = 9;
-        echo '<table>';
 
-        for ($i = 0; $i < $iterations; $i++) {
-            echo '<tr>';
-            $num = rand(1, 20);
-            $odd_or_even = (0 == $num % 2) ? 'even' : 'odd';
-            echo "<td>$num</td><td>$odd_or_even</td></tr>";
-            $total += $num;
-        }
-        $avg = $total / $iterations;
-        $avg = number_format($avg, 2);
-        echo "<tr><td>$avg</td></tr></table>";
+
 
         ?>
 
