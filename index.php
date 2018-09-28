@@ -13,5 +13,7 @@
         <br />
         <a href="homework/1">Homework 1</a>
         <br />
+        <a href="homework/2">Homework 2</a>
+        <br />
     </body>
 </html>
