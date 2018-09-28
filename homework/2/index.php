@@ -75,7 +75,7 @@
                 }
 
             }
-            else {
+            else if (empty($correctGuess) && !empty($_POST['guess'])) {
                 echo '<span class="entry">';
                 echo 'Sorry, none of your entries were the dice.<br />Modify your guesses to start again or refresh to use same guesses.';
                 echo '</span>';
