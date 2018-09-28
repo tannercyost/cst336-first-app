@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: gray;
+    text-align: center;
+
+}
+
+.dice {
+    opacity: .5;
+    padding: 5px;
+    width: 3em;
+    height: auto;
+}
+
+.winners {
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none; 
+    color: white;
+    font-family: 'Helvetica';
+}
+
+.entry {
+    padding: 20px;
+}
+
+p {
+    font-family: Helvetica;
+    color: white;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+    color: white;
+}
+
+h3 {
+    font-size: 2em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+}
+
+.text {
+    margin: .5em;
+    font-size: 1em;
+    font-family: 'Helvetica';
+}
+
+.text:focus {
+    background-color: grey;
+}
+
+.button {
+    color: black;
+    font-family: 'Helvetica';
+}
+
