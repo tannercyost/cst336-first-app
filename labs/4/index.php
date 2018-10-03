@@ -18,7 +18,7 @@
 <html>
     <head>
         <title>Image Carousel</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
         <style>
             @import url("css/styles.css");
             body {
@@ -58,7 +58,7 @@
                             $randomIndex = rand(0, count($imageURLs));
                         } while (!isset($imageURLs[$randomIndex]));
                         
-                        echo '<div class="item ';
+                        echo '<div class="carousel-item ';
                         echo ($i == 0)?"active":"";
                         echo '">';
                         echo '<img src="' . $imageURLs[$randomIndex] . '">';
@@ -102,6 +102,6 @@
         
         <br /><br />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     </body>
 </html>
