@@ -11,6 +11,8 @@
         <br />
         <a href="https://tanneryostlab3.herokuapp.com/">Lab 3</a>
         <br />
+        <a href="labs/4">Lab 4</a>
+        <br />
         <a href="homework/1">Homework 1</a>
         <br />
         <a href="homework/2">Homework 2</a>
