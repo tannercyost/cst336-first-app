@@ -7,14 +7,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> </title>
+        <title></title>
         <link href="css/styles.css" rel="stylesheet" type="text/css" />
     </head>
     
     <body>
-        <h1> </h1>
+        <h1></h1>
         <?php
-  
+
         ?>
 
     </body>
