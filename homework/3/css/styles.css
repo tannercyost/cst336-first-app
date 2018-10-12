@@ -4,15 +4,15 @@ body {
     text-align: center;
 }
 
-p {
-    font-family: Helvetica;
-    color: white;
-}
-
 form {
     font-size: 1.5em;
     padding: 2px;
     font-family: 'Helvetica';
+    color: white;
+}
+
+p {
+    font-family: Helvetica;
     color: white;
 }
 
@@ -67,4 +67,4 @@ h1 {
 .finalAbilities {
     color: white;
     
-}
+} 
