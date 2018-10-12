@@ -9,6 +9,32 @@ p {
     color: white;
 }
 
+form {
+    font-size: 1.5em;
+    padding: 2px;
+    font-family: 'Helvetica';
+    color: white;
+}
+
+a {
+    font-size: 1.5em;
+    margin: 2px;
+    font-family: 'Helvetica';
+    color: green;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+}
+
 h1 {
     font-size: 4em;
     margin-bottom: 0px;
@@ -16,10 +42,29 @@ h1 {
     color: white;
 }
 
+#stats {
+    width: auto;
+    float: left;
+    margin-left: 30em;
+    border: solid white;
+    padding: 15px;
+    padding-top: 0px;
+}
 
+#abilities {
+    width: auto;
+    float: right;
+    margin-right: 30em;
+    border: solid white;
+    padding: 15px;
+    padding-top: 0px;
+}
 
-h3 {
-    font-size: 2em;
-    margin-bottom: 0px;
-    font-family: 'Helvetica';
+.finalStats {
+    color: white;
+}
+
+.finalAbilities {
+    color: white;
+    
 }
