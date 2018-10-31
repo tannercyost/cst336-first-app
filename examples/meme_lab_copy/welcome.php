@@ -1,21 +1,3 @@
-<?php
-    $dbConn = getDatabaseConnection(); 
-    $sql = "SELECT * FROM all_memes ORDER BY RAND() LIMIT 1"; 
-    
-    $statement = $dbConn->prepare($sql); 
-    
-    $statement->execute(); 
-    $records = $statement->fetchAll(); 
-    
-    foreach ($records as $record) {
-      $memeURL = $records[0]['meme_url'];
-      echo  '<div class="meme-div" style="background-image:url(' . $memeURL . ');">'; 
-      echo  '<h2 class="line1">' . $records[0]["line1"] . '</h2>'; 
-      echo  '<h2 class="line2">' . $records[0]["line2"] . '</h2>'; 
-      echo  '</div>'; 
-    }
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,7 +11,6 @@
     <form method="post" action="meme.php">
         Line 1: <input type="text" name="line1"></input> <br/>
         Line 2: <input type="text" name="line2"></input> <br/>
-        
         Meme Type:
         <select name="meme-type">
           <option value="college-grad">Happy College Grad</option>
@@ -38,7 +19,6 @@
           <option value="old-class">Old Classroom</option>
         </select>
 
-        
         <input type="submit"></input>
     </form>
     

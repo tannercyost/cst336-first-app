@@ -1,0 +1,56 @@
+body {
+    background-color: black;
+    color: gray;
+    text-align: center;
+}
+
+.quote {
+    
+}
+
+.author {
+    font-style: italic;
+}
+
+form {
+    font-size: 1.5em;
+    padding: 2px;
+    font-family: 'Helvetica';
+    color: white;
+}
+
+p {
+    font-family: Helvetica;
+    color: white;
+}
+
+a {
+    font-size: 1.5em;
+    margin: 2px;
+    font-family: 'Helvetica';
+    color: green;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+    color: red;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+    font-family: 'Helvetica';
+    color: white;
+}
+
+
+
+
