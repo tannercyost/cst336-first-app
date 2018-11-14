@@ -21,7 +21,7 @@
         <br />
         <a href="labs/meme_lab/welcome.php">Meme Lab (7)</a>
         <br />
-        <a href="labs/8">Hangman (8)</a>
+        <a href="labs/hangman">Hangman (8)</a>
         <br />
         <h2>Homework</h2>
         <a href="homework/1">Homework 1</a>
