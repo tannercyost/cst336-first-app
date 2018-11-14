@@ -23,6 +23,8 @@
         <br />
         <a href="labs/hangman">Hangman (8)</a>
         <br />
+        <a href="labs/9">Lab 9</a>
+        <br />
         <h2>Homework</h2>
         <a href="homework/1">Homework 1</a>
         <br />
