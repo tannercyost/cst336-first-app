@@ -32,7 +32,7 @@
         <br />
         <a href="homework/3">Homework 3</a>
         <br />
-        <a href="homework/4">Homework 4</a>
+        <a href="homework/4/v2/index.html">Homework 4</a>
         <br />
         <h2>Midterm</h2>
         <a href="cst336_midterm/cst336_midterm.php">Midterm 1</a>
