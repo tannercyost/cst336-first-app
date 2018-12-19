@@ -37,7 +37,10 @@
         <a href="homework/4/v2/index.html">Homework 4</a>
         <br />
         <h2>Midterm</h2>
-        <a href="cst336_midterm/cst336_midterm.php">Midterm 1</a>
+        <a href="cst336_midterm/cst336_midterm.php">Midterm</a>
+        <br />
+        <h2>Final Exam</h2>
+        <a href="cst336_final_exam/index.html">Final Exam</a>
         <br />
     </body>
 </html>
