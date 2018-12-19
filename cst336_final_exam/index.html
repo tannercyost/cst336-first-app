@@ -1,9 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> </title>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
 
+        <div id="pages">
+            <table>
+                <thead>
+                    <th>Code</th>
+                    <th>Run From</th>
+                    <th>To</th>
+                    <th>Type</th>
+                    <th>
+                        <button class="add action">
+                            <img src="img/racing-add.png" />
+                        </button>
+                    </th>
+                </thead>
+                <tbody>
+                    <!--Put all the pages data here-->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Modal, hidden until called -->
+        <div id="modalBox" class="modal">
+    
+            <!-- Modal body -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div>
+                    <label for="code">Race ID</label>
+                    <input id="code" type="text" />
+                </div>
+                
+                <div>
+                    <label for="date">Date</label>
+                    <input id="date" type="date" />
+                </div>
+                
+                <div>
+                    <label for="date">Start time</label></label>
+                    <input id="date" type="time" />
+                </div>
+
+                <div>
+                    <label for="action">Password</label>
+                    <input id="action" type="psw" />
+                </div>
+                
+                <div>
+                    <span>Location</label>
+                    <textarea id="description" rows="5"></textarea>
+                </div>
+    
+                <div>
+                    <button class="save">Save</button>
+                </div>
+    
+            </div>
+    
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/race.js"></script>
     </body>
 </html>
