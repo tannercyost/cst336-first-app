@@ -5,14 +5,14 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
-
+        <a href="rubric.html">Rubric</a>
         <div id="pages">
             <table>
                 <thead>
-                    <th>Code</th>
-                    <th>Run From</th>
-                    <th>To</th>
-                    <th>Type</th>
+                    <th>Race ID</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Location</th>
                     <th>
                         <button class="add action">
                             <img src="img/racing-add.png" />
@@ -32,8 +32,8 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <div>
-                    <label for="code">Race ID</label>
-                    <input id="code" type="text" />
+                    <label for="raceId">Race ID</label>
+                    <input id="raceId" type="text" />
                 </div>
                 
                 <div>
@@ -42,22 +42,22 @@
                 </div>
                 
                 <div>
-                    <label for="date">Start time</label></label>
-                    <input id="date" type="time" />
+                    <label for="time">Start time</label></label>
+                    <input id="time" type="time" />
                 </div>
 
                 <div>
-                    <label for="action">Password</label>
-                    <input id="action" type="psw" />
+                    <label for="password">Password</label>
+                    <input id="password" type="psw" />
                 </div>
                 
                 <div>
                     <span>Location</label>
-                    <textarea id="description" rows="5"></textarea>
+                    <textarea id="location" rows="4"></textarea>
                 </div>
     
                 <div>
-                    <button class="save">Save</button>
+                    <button class="saveRace">Save Race</button>
                 </div>
     
             </div>

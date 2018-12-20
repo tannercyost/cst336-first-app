@@ -1,21 +1,16 @@
 <?php
-session_start();
-// error_reporting(E_ALL);
-// ini_set('display_errors', 'on');
-include 'database.php';
-include 'password.php';
-
-$httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
-
-switch($httpMethod) {
-    case "OPTIONS":
+    session_start();
+    $httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
+    switch($httpMethod) {
+      
+      case "OPTIONS":
         // Allows anyone to hit your API, not just this c9 domain
         header("Access-Control-Allow-Headers: X-ACCESS_TOKEN, Access-Control-Allow-Origin, Authorization, Origin, X-Requested-With, Content-Type, Content-Range, Content-Disposition, Content-Description");
         header("Access-Control-Allow-Methods: POST, GET");
         header("Access-Control-Max-Age: 3600");
         exit();
-    
-    case "GET":
+
+      case "GET":
           
         $servername = "localhost";
         $dbPort = 3306;
@@ -25,14 +20,13 @@ switch($httpMethod) {
         
         // My user information...I could have prompted for password, as well, or stored in the
         // environment, or, or, or (all in the name of better security)
-        $username = getenv('C9_USER');
-        $password = getPassword();
-
+        $username = "tyost";
+        $password = "cst336";
+        
         // Establish the connection and then alter how we are tracking errors (look those keywords up)
         $dbConn = new PDO("mysql:host=$servername;port=$dbPort;dbname=$database", $username, $password);
-        
         $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+        
         // Build the select statement (assuming the posted data has a field called dataFromPost)
         // $whereSql = "
         // SELECT p.*, s.name AS 'status_name', t.name AS 'type_name'
@@ -43,9 +37,7 @@ switch($httpMethod) {
         // ";
         
         $whereSql = "
-        SELECT * 
-        FROM races
-        WHERE status_id='1';
+        SELECT * FROM `races` WHERE 1
         ";
         
         // The prepare caches the SQL statement for N number of parameters imploded above
@@ -58,41 +50,44 @@ switch($httpMethod) {
         $sqlQueryResultsAssocArray = $whereStmt->fetchAll(PDO::FETCH_ASSOC);
         // Allow any client to access
         header("Access-Control-Allow-Origin: *");
-        echo json_encode($sqlQueryResultsAssocArray);
+        var_dump($sqlQueryResultsAssocArray);
         break;
-        
-    case 'POST':
+      case 'POST':
+          
           
         // Get the body json that was sent
         $rawJsonString = file_get_contents("php://input");
         
         // Make it a associative array (by making second param = true)
         $postedJsonData = json_decode($rawJsonString, true);
-        var_dump($postedJsonData);
-        // initiating DB connection
+        
+        
+        // Save the data to the database
         $servername = getenv('IP');
         $dbPort = 3306;
         
         // Which database (the name of the database in phpMyAdmin)?
-        $database = "race";
+        $database = "practice_exam";
         
         // My user information...I could have prompted for password, as well, or stored in the
         // environment, or, or, or (all in the name of better security)
         $username = getenv('C9_USER');
-        $password = getPassword();
+        $password = "";
         
         // Establish the connection and then alter how we are tracking errors (look those keywords up)
-        // $dbConn = new PDO("mysql:host=$servername;port=$dbPort;dbname=$database", $username, $password);
-        // $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $dbConn = getDatabaseConnection($servername, $dbPort, $database, $username, $password);
+        $dbConn = new PDO("mysql:host=$servername;port=$dbPort;dbname=$database", $username, $password);
+        $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         // Build the select statement (assuming the posted data has a field called dataFromPost)
         // Need to still do a couple things:
         // 1) convert the date I got??? maybe not, but be aware, and need to NULL check the to_date
         // 2) make sure NULL goes into type_id IFF the typeId parameter is empty string
+        if (!$postedJsonData["typeId"]) {
+          $postedJsonData["typeId"] = "NULL";
+        }
         
         $whereSql = "
-        INSERT INTO `races`(`raceid`, `date`, `time`, `password`, `location`, `status_id`) VALUES (:raceId, :date, :time, :password, :location, :status_id)
+        INSERT INTO page(code, title, from_date, to_date, type_id) VALUES (:code, :title, :fromDate, :toDate, :typeId) 
         ";
         
         // The prepare caches the SQL statement for N number of parameters imploded above
@@ -106,18 +101,20 @@ switch($httpMethod) {
         // Allow any client to access
         header("Access-Control-Allow-Origin: *");
         
+        
         // Make some status data to send back down in an associative array
         
         // Sending back down as JSON
-        echo json_encode($postedJsonData);
-    
+        //echo json_encode($postedJsonData);
+
+
         break;
-    case 'PUT':
+      case 'PUT':
         header("Access-Control-Allow-Origin: *");
         http_response_code(401);
         echo "Not Supported";
         break;
-    case 'DELETE':
+      case 'DELETE':
         header("Access-Control-Allow-Origin: *");
         http_response_code(401);
         break;
