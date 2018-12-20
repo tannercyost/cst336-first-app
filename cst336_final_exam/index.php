@@ -20,11 +20,8 @@ switch($httpMethod) {
         $servername = "localhost";
         $dbPort = 3306;
         
-        // Which database (the name of the database in phpMyAdmin)?
         $database = "race";
         
-        // My user information...I could have prompted for password, as well, or stored in the
-        // environment, or, or, or (all in the name of better security)
         $username = getenv('C9_USER');
         $password = getPassword();
 
@@ -33,20 +30,14 @@ switch($httpMethod) {
         
         $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Build the select statement (assuming the posted data has a field called dataFromPost)
-        // $whereSql = "
-        // SELECT p.*, s.name AS 'status_name', t.name AS 'type_name'
-        // FROM page p INNER JOIN
-        //     status s ON p.status_id = s.id LEFT OUTER JOIN
-        //     type t ON p.type_id = t.id
-        // WHERE status_id <> 0
-        // ";
-        
+
         $whereSql = "
         SELECT * 
         FROM races
         WHERE status_id='1';
         ";
+        //db will only display things with status code of 1 meaning they are active events
+        //a cancelled event *should* have a code of 2, and a past even *should* have a code of 0
         
         // The prepare caches the SQL statement for N number of parameters imploded above
         $whereStmt = $dbConn->prepare($whereSql);
@@ -76,20 +67,11 @@ switch($httpMethod) {
         // Which database (the name of the database in phpMyAdmin)?
         $database = "race";
         
-        // My user information...I could have prompted for password, as well, or stored in the
-        // environment, or, or, or (all in the name of better security)
         $username = getenv('C9_USER');
         $password = getPassword();
         
-        // Establish the connection and then alter how we are tracking errors (look those keywords up)
-        // $dbConn = new PDO("mysql:host=$servername;port=$dbPort;dbname=$database", $username, $password);
-        // $dbConn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $dbConn = getDatabaseConnection($servername, $dbPort, $database, $username, $password);
         
-        // Build the select statement (assuming the posted data has a field called dataFromPost)
-        // Need to still do a couple things:
-        // 1) convert the date I got??? maybe not, but be aware, and need to NULL check the to_date
-        // 2) make sure NULL goes into type_id IFF the typeId parameter is empty string
         
         $whereSql = "
         INSERT INTO `races`(`raceid`, `date`, `time`, `password`, `location`, `status_id`) VALUES (:raceId, :date, :time, :password, :location, :status_id)
